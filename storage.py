@@ -30,3 +30,13 @@ def load_expenses():
 def save_expenses(expenses):
     """Save list of expense dictionaries."""
     save_json(EXPENSES_FILE, expenses)
+
+
+def load_budgets():
+    """Return dictionary mapping category names to monthly budget limits."""
+    return load_json(BUDGET_FILE, {})
+
+
+def save_budgets(budgets):
+    """Save category budget limits dictionary."""
+    save_json(BUDGET_FILE, budgets)
